@@ -9,8 +9,8 @@
       '<div><b class="fh">Explore</b>' + S.nav.map(function (n) { return '<a href="' + n.href + '">' + H.esc(n.label) + "</a>"; }).join("") + "</div>" +
       '<div><b class="fh">Reach the team</b>' +
       '<a href="tel:' + H.esc(phone.replace(/\s+/g, "")) + '">' + H.esc(phone) + "</a>" +
-      '<a href="' + H.esc(d.website) + '" rel="noopener" target="_blank">ligospace.co.ke</a><a href="#/admin">Admin</a></div></div>' +
-      '<div class="fcp">© ' + new Date().getFullYear() + " " + H.esc(d.name) + " · " + H.esc(d.org) + "</div></div></footer>"
+      '' + (d.email ? '<a href="mailto:' + H.esc(d.email) + '">' + H.esc(d.email) + "</a>" : "") + '<a href="' + H.esc(d.website) + '" rel="noopener" target="_blank">L.I.G.O. SPACE</a><a href="#/admin">Admin</a></div></div>' +
+      '<div class="fcp">© ' + new Date().getFullYear() + " " + H.esc(d.name) + " (Smaltal). All rights reserved." + "</div></div></footer>"
     );
   };
 })();

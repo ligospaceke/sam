@@ -4,9 +4,9 @@
   S.nav = [
     { key: "", label: "Home", href: "#/" },
     { key: "story", label: "The Story", href: "#/story" },
-    { key: "framework", label: "The Framework", href: "#/framework" },
-    { key: "ligo", label: "L.I.G.O. SPACE", href: "#/ligo" },
-    { key: "faith-family", label: "Faith & Family", href: "#/faith-family" },
+    { key: "framework", label: "The Thinking", href: "#/framework" },
+    { key: "ligo", label: "The Work", href: "#/ligo" },
+    { key: "gallery", label: "Gallery", href: "#/gallery" },
     { key: "contact", label: "Contact", href: "#/contact" }
   ];
   function links() {
@@ -20,7 +20,7 @@
       '<header class="site-header"><div class="wrap bar">' +
       '<button class="icon-btn menu-btn" data-action="menu" aria-expanded="false" aria-controls="drawer" aria-label="Menu">☰</button>' +
       '<a class="brand" href="#/" aria-label="Samuel M.K., home">' + S.logo(40) +
-      "<span><b>Samuel M.K.</b><small>Smaltal · Founder, L.I.G.O. SPACE</small></span></a>" +
+      "<span><b>Samuel M.K.</b><small>Smaltal · Singer, minister, builder</small></span></a>" +
       '<nav class="nav" aria-label="Main">' + links() + "</nav>" +
       '<button class="icon-btn" data-action="theme" aria-label="Switch light or dark">◐</button>' +
       '<a class="btn primary sm head-cta" href="#/contact">Get in touch</a></div></header>' +

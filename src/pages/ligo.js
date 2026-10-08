@@ -12,8 +12,8 @@
     var spaces = ["opportunity", "dignity", "learning", "connection", "creativity", "mentorship", "technology", "purpose", "human possibility"]
       .map(function (x) { return "<li>" + x + "</li>"; }).join("");
     var html =
-      '<div class="wrap page-head"><p class="eyebrow">The vision</p><h1>LIGO://SPACE</h1>' +
-      "<p>" + H.esc(d.motto) + " A human-centered institution in Kajiado South, Kenya, written here the way it thinks: as a system.</p></div>" +
+      '<div class="wrap page-head"><p class="eyebrow">The work</p><h1>What he is building: LIGO://SPACE</h1>' +
+      "<p>" + H.esc(d.motto) + " The human-centered institution Samuel founded in Kajiado South, written the way he thinks: as a system.</p></div>" +
       '<section class="section"><div class="wrap"><div class="head reveal"><p class="eyebrow">Step one</p><h2>Define humanity as the root system.</h2>' +
       "<p>Import potential, direction, opportunity, connection, purpose and love. Then look for the gap.</p></div>" +
       '<pre class="term reveal" aria-label="Detect drought of direction"><span class="c">// DETECT drought_of_direction</span>\n<span class="k">IF</span>   PEOPLE_EXIST\n<span class="k">AND</span>  POTENTIAL_EXISTS\n<span class="k">AND</span>  OPPORTUNITIES_EXIST\n<span class="k">BUT</span>  CONNECTIONS_FAIL\n<span class="k">THEN</span> SYSTEM.STATUS = <span class="s">"UNSYNCHRONIZED"</span></pre></div></section>' +
@@ -31,7 +31,7 @@
       '<p class="not">Not just a platform.<br>Not just an organization.<br>Not just an opportunity hub.</p>' +
       "<h2>A human synchronization space.</h2>" + chain(["Love", "Humanity", "Possibility", "Action", "Legacy"]) +
       '<p class="eyebrow" style="margin-top:26px">A space for</p><ul class="chips">' + spaces + "</ul>" +
-      '<a class="btn primary" href="' + H.esc(d.website) + '" target="_blank" rel="noopener">Visit ligospace.co.ke</a> <a class="btn ghost" href="#/story/ligo">How it began</a></div></section>';
+      '<a class="btn primary" href="' + H.esc(d.website) + '" target="_blank" rel="noopener">Visit L.I.G.O. SPACE</a> <a class="btn ghost" href="#/story/builder">How it began</a></div></section>';
     return { title: "L.I.G.O. SPACE: Samuel M.K.", html: html };
   };
 })();

@@ -12,10 +12,10 @@
     var chips = d.dimensions.map(function (x) { return "<li>" + H.esc(x) + "</li>"; }).join("");
     var html =
       '<section class="hero"><div class="wrap hero-grid"><div>' +
-      '<p class="eyebrow">Founder · L.I.G.O. SPACE · Kajiado South</p>' +
+      '<p class="eyebrow">Singer · Minister · Thinker · Builder</p>' +
       '<h1>Samuel M.K.<span class="alias">the boy once called Smaltal</span></h1>' +
       '<p class="lead">' + H.esc(tagline) + "</p>" +
-      '<div class="cta"><a class="btn primary" href="#/story">Read the story</a><a class="btn ghost" href="#/ligo">Enter L.I.G.O. SPACE</a></div></div>' +
+      '<div class="cta"><a class="btn primary" href="#/story">Read the story</a><a class="btn ghost" href="#/gallery">See the gallery</a></div></div>' +
       '<div class="hero-mark" aria-hidden="true">' + S.logo() + "</div></div></section>" +
       '<div class="wrap tiles reveal"><div class="grid">' + tiles + "</div></div>" +
       '<section class="section"><div class="wrap"><div class="head reveal"><p class="eyebrow">The journey</p>' +
@@ -28,13 +28,13 @@
       '<ul class="chips">' + chips + "</ul>" +
       '<a class="btn primary" href="#/framework">Explore the six dimensions</a></div></div></section>' +
       '<section class="section"><div class="wrap"><div class="grid g3">' +
-      '<a class="card top reveal" href="#/story/loud"><p class="eyebrow">A voice that could not stay hidden</p><h3>From warnings in rented houses to broken benches in a standing ovation.</h3><p>The Smaltal story, and a PEFA Church song launch nobody forgot.</p></a>' +
-      '<a class="card top reveal d2" href="#/ligo"><p class="eyebrow">The vision</p><h3>' + H.esc(d.site.motto) + "</h3><p>Not an organization to admire, but pathways to walk.</p></a>" +
-      '<a class="card top reveal d3" href="#/faith-family"><p class="eyebrow">The foundation</p><h3>Above every title stands faith. Behind every vision, a home.</h3><p>The private world that carries the public work.</p></a>' +
+      '<a class="card top reveal" href="#/story/voice"><p class="eyebrow">A voice that could not stay hidden</p><h3>From warnings in rented houses to broken benches in a standing ovation.</h3><p>The Smaltal story, and a PEFA Church song launch nobody forgot.</p></a>' +
+      '<a class="card top reveal d2" href="#/story/builder"><p class="eyebrow">The builder</p><h3>From music to human possibility.</h3><p>The questions behind the Synchronized Human System™ and the institution he founded.</p></a>' +
+      '<a class="card top reveal d3" href="#/story/home"><p class="eyebrow">The foundation</p><h3>Above every title stands faith. Behind every vision, a home.</h3><p>The private world that carries the public work.</p></a>' +
       "</div></div></section>" +
       '<section class="cta-band"><div class="wrap reveal"><p class="eyebrow">' + H.esc(d.site.crown) + "</p>" +
       "<h2>The story is still being written.</h2><p>If you believe people deserve opportunity, dignity and a path, let us talk.</p>" +
       '<a class="btn primary" href="#/contact">Get in touch</a> <a class="btn ghost" href="#/story">Start from the beginning</a></div></section>';
-    return { title: "Samuel M.K. (Smaltal): Founder of L.I.G.O. SPACE", html: html };
+    return { title: "Samuel M.K. (Smaltal): Singer, minister, thinker, builder", html: html };
   };
 })();

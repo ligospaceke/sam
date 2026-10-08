@@ -22,7 +22,7 @@
       '<blockquote class="bq">What happens when the different dimensions of a human being begin working together?</blockquote>' +
       "<p>The aim is not another concept. It is something that can help people understand themselves, connect their dimensions and move toward alignment.</p>" +
       '<p class="note"><b>An honest note.</b> The framework is not presented as established science. It is an evolving body of thought, to be explored, researched, tested and strengthened with psychology, human development, measurement and other disciplines.</p>' +
-      '<div class="cta"><a class="btn ghost" href="#/story/framework">Read it in the story</a><a class="btn primary" href="#/ligo">See it run in L.I.G.O. SPACE</a></div></div></section>';
+      '<div class="cta"><a class="btn ghost" href="#/story/builder">Read it in the story</a><a class="btn primary" href="#/ligo">See his work</a></div></div></section>';
     return { title: "The Synchronized Human System™: Samuel M.K.", html: html };
   };
 })();

@@ -1,9 +1,6 @@
-# Samuel M.K. · L.I.G.O. SPACE — rebuilt on the KRWC framework
-Vanilla JS, hash-routed, no build step (open `index.html`). Graphite + gold, dark by default, light toggle.
-- New: glass header + slide-in drawer, splash, route progress bar, overlapping stat tiles, gold-topped cards,
-  alternating bands, closing CTA band, 3-column footer.
-- New: **LIGO://SPACE page** renders the manifesto as a system (detect → S.H.S.™ layers → alignment flow → global rules → loop → output).
-- Framework page now maps each dimension to its manifesto verb (Body→Execute … Purpose→Align).
-- Contact: call, WhatsApp (derived from the team number — verify), website.
-- Unchanged on purpose: `src/services/data.js` story chapters (his own words), store.js, auth.js, router.js, admin.js.
-- Admin: `#/admin` — demo login `samuel` / `synchronized` (**change before going live**; edits are browser-local).
+# Samuel M.K. — personal site (KRWC framework, graphite + gold)
+Open `index.html`. Pages: Home, The Story (4 short chapters), The Thinking, The Work (LIGO://SPACE), Gallery, Contact, Admin.
+- Logo: `assets/logo.png` (cropped, rounded) + `assets/favicon.png`; used in header, hero, splash, favicon.
+- Gallery: photos are `assets/1.jpg … n.jpg`, listed in `src/services/data.js` → `gallery`. Currently only the SMK mark (1.jpg).
+- Contact: phone +254 791 236179. Email is blank — set `site.email` in data.js and it appears on Contact and in the footer.
+- Admin: `#/admin`, demo login `samuel` / `synchronized` (change before going live).

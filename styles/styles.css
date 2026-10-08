@@ -93,3 +93,14 @@ a.card{display:block;text-decoration:none}.card:hover{transform:translateY(-3px)
 #splash i{display:block;height:3px;width:160px;background:linear-gradient(90deg,var(--gold),var(--gold-2));animation:ld .9s ease-out}@keyframes ld{from{width:0}}
 #view:focus{outline:none}
 .reveal.d1{transition-delay:.08s}
+
+.logo{border-radius:22%;display:block}.hero-mark .logo{width:min(360px,70vw);border-radius:12%;box-shadow:0 30px 60px -20px #000a,0 0 60px var(--gold-soft)}
+#splash img{border-radius:22%;animation:pu 1.4s ease-in-out infinite}
+.cat{display:grid;grid-template-columns:90px 1fr;gap:26px;max-width:860px;margin:0 auto}.cat-n{font:700 4.2rem/1 "Libre Baskerville",serif;color:var(--gold);opacity:.55}
+.cat h2{font-size:clamp(1.5rem,3.6vw,2.2rem)}@media(max-width:600px){.cat{grid-template-columns:1fr;gap:6px}.cat-n{font-size:2.6rem}}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{padding:8px 16px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:700;font-size:.9rem;background:linear-gradient(135deg,var(--card-a),var(--card-b))}.pill:hover{border-color:var(--gold)}
+.masonry{columns:3 260px;gap:16px}.shot{margin:0 0 16px;break-inside:avoid;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.shot img{width:100%;display:block;cursor:zoom-in;transition:transform .4s}.shot:hover img{transform:scale(1.03)}.shot figcaption{padding:10px 14px;color:var(--muted);font-size:.88rem}
+.more{text-align:center;color:var(--muted);margin-top:28px}
+.lb{position:fixed;inset:0;z-index:500;background:#000d;display:grid;place-items:center;padding:20px}.lb img{max-height:88vh;max-width:92vw;border-radius:14px}
+.lbx{position:absolute;width:46px;height:46px;border-radius:50%;border:1px solid #fff4;background:#ffffff18;color:#fff;font-size:1.4rem;cursor:pointer;top:16px;right:16px}.lbx.l{top:50%;left:16px;right:auto}.lbx.r{top:50%;right:16px}
