@@ -32,7 +32,7 @@
       var ov = load().chapters || {};
       return S.data.chapters.map(function (c) {
         var m = ov[c.id];
-        return m ? { id: c.id, kicker: m.kicker, title: m.title, body: m.body, edited: true } : clone(c);
+        return m ? { id: c.id, img: c.img, kicker: m.kicker, title: m.title, body: m.body, edited: true } : clone(c);
       });
     },
     chapter: function (id) {

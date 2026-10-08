@@ -6,8 +6,8 @@
     var list = S.store.chapters();
     var jump = list.map(function (c) { return '<a class="pill" href="#/story/' + H.esc(c.id) + '">' + H.esc(c.kicker) + "</a>"; }).join("");
     var secs = list.map(function (c, i) {
-      return '<section class="section' + (i % 2 ? " alt" : "") + '" id="ch-' + H.esc(c.id) + '"><div class="wrap"><div class="cat reveal">' +
-        '<div class="cat-n">0' + (i + 1) + '</div><div><p class="eyebrow">' + H.esc(c.kicker) + "</p><h2>" + H.esc(c.title) +
+      return '<section class="section' + (i % 2 ? " alt" : "") + '" id="ch-' + H.esc(c.id) + '"><div class="wrap"><div class="cat reveal' + (i % 2 ? " rev" : "") + '">' +
+        '<figure class="cat-img"><img src="' + H.esc(c.img || "assets/9.jpg") + '" alt="' + H.esc(c.kicker) + '" loading="lazy"><span class="cat-n">0' + (i + 1) + '</span></figure><div><p class="eyebrow">' + H.esc(c.kicker) + "</p><h2>" + H.esc(c.title) +
         '</h2><div class="prose">' + H.fmtBody(c.body) + "</div></div></div></div></section>";
     }).join("");
     var html =

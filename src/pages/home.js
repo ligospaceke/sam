@@ -16,7 +16,7 @@
       '<h1>Samuel M.K.<span class="alias">the boy once called Smaltal</span></h1>' +
       '<p class="lead">' + H.esc(tagline) + "</p>" +
       '<div class="cta"><a class="btn primary" href="#/story">Read the story</a><a class="btn ghost" href="#/gallery">See the gallery</a></div></div>' +
-      '<div class="hero-mark" aria-hidden="true">' + S.logo() + "</div></div></section>" +
+      '<div class="hero-mark"><div class="hero-photo"><img src="assets/6.jpg" alt="Samuel M.K. in worship">' + S.logo(84) + "</div></div></div></section>" +
       '<div class="wrap tiles reveal"><div class="grid">' + tiles + "</div></div>" +
       '<section class="section"><div class="wrap"><div class="head reveal"><p class="eyebrow">The journey</p>' +
       "<h2>Not leaving music behind. Expanding it.</h2>" +
@@ -28,10 +28,13 @@
       '<ul class="chips">' + chips + "</ul>" +
       '<a class="btn primary" href="#/framework">Explore the six dimensions</a></div></div></section>' +
       '<section class="section"><div class="wrap"><div class="grid g3">' +
-      '<a class="card top reveal" href="#/story/voice"><p class="eyebrow">A voice that could not stay hidden</p><h3>From warnings in rented houses to broken benches in a standing ovation.</h3><p>The Smaltal story, and a PEFA Church song launch nobody forgot.</p></a>' +
-      '<a class="card top reveal d2" href="#/story/builder"><p class="eyebrow">The builder</p><h3>From music to human possibility.</h3><p>The questions behind the Synchronized Human System™ and the institution he founded.</p></a>' +
-      '<a class="card top reveal d3" href="#/story/home"><p class="eyebrow">The foundation</p><h3>Above every title stands faith. Behind every vision, a home.</h3><p>The private world that carries the public work.</p></a>' +
+      '<a class="card top has-img reveal" href="#/story/voice"><img src="assets/5.jpg" alt="" loading="lazy"><div class="bd"><p class="eyebrow">A voice that could not stay hidden</p><h3>From warnings in rented houses to broken benches in a standing ovation.</h3><p>The Smaltal story, and a PEFA Church song launch nobody forgot.</p></div></a>' +
+      '<a class="card top has-img reveal d2" href="#/story/builder"><img src="assets/3.jpg" alt="" loading="lazy"><div class="bd"><p class="eyebrow">The builder</p><h3>From music to human possibility.</h3><p>The questions behind the Synchronized Human System™ and the institution he founded.</p></div></a>' +
+      '<a class="card top has-img reveal d3" href="#/story/home"><img src="assets/8.jpg" alt="" loading="lazy"><div class="bd"><p class="eyebrow">The foundation</p><h3>Above every title stands faith. Behind every vision, a home.</h3><p>The private world that carries the public work.</p></div></a>' +
       "</div></div></section>" +
+      '<section class="section"><div class="wrap"><div class="head reveal"><p class="eyebrow">Moments</p><h2>The man behind the mic, the pen and the plan.</h2></div><div class="strip reveal">' +
+      [10, 7, 4, 2].map(function (n) { return '<img src="assets/' + n + '.jpg" alt="Samuel M.K." loading="lazy">'; }).join("") +
+      '</div><p style="text-align:center;margin-top:26px"><a class="btn ghost" href="#/gallery">Open the gallery</a></p></div></section>' +
       '<section class="cta-band"><div class="wrap reveal"><p class="eyebrow">' + H.esc(d.site.crown) + "</p>" +
       "<h2>The story is still being written.</h2><p>If you believe people deserve opportunity, dignity and a path, let us talk.</p>" +
       '<a class="btn primary" href="#/contact">Get in touch</a> <a class="btn ghost" href="#/story">Start from the beginning</a></div></section>';

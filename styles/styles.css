@@ -104,3 +104,15 @@ a.card{display:block;text-decoration:none}.card:hover{transform:translateY(-3px)
 .more{text-align:center;color:var(--muted);margin-top:28px}
 .lb{position:fixed;inset:0;z-index:500;background:#000d;display:grid;place-items:center;padding:20px}.lb img{max-height:88vh;max-width:92vw;border-radius:14px}
 .lbx{position:absolute;width:46px;height:46px;border-radius:50%;border:1px solid #fff4;background:#ffffff18;color:#fff;font-size:1.4rem;cursor:pointer;top:16px;right:16px}.lbx.l{top:50%;left:16px;right:auto}.lbx.r{top:50%;right:16px}
+
+.hero-photo{position:relative;width:min(380px,72vw)}.hero-photo>img:not(.logo){width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 15%;border-radius:26px;border:4px solid var(--gold);box-shadow:var(--sh-2),0 0 60px var(--gold-soft)}
+.hero-mark .hero-photo .logo{position:absolute;right:-12px;bottom:-14px;width:84px;height:84px;box-shadow:0 12px 30px #000a;border-radius:20%}
+@media(max-width:860px){.hero-mark .hero-photo{width:min(260px,70vw)}.hero-mark .hero-photo .logo{width:64px;height:64px}}
+.card.has-img{padding:0;overflow:hidden}.card.has-img>img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 20%;display:block}.card.has-img .bd{padding:22px 24px 26px}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%;border-radius:16px;box-shadow:var(--shadow);transition:transform .3s}.strip img:hover{transform:translateY(-4px)}
+.cat{grid-template-columns:minmax(0,340px) 1fr;align-items:center;max-width:980px;gap:38px}.cat.rev .cat-img{order:2}
+.cat-img{position:relative;margin:0}.cat-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 15%;border-radius:22px;border:1px solid var(--line);box-shadow:var(--sh-2)}
+.cat-n{position:absolute;top:12px;left:14px;padding:4px 14px;border-radius:999px;font:700 1rem "Libre Baskerville",serif;color:#14151a;opacity:1;background:linear-gradient(135deg,var(--gold-2),var(--gold))}
+@media(max-width:760px){.cat,.cat.rev{grid-template-columns:1fr}.cat.rev .cat-img{order:0}.cat-n{font-size:1rem}}
+.page-head.has-ph{display:grid;grid-template-columns:1fr 190px;gap:24px;align-items:center}.page-head.has-ph .ph-img{order:2;width:190px;aspect-ratio:1;object-fit:cover;object-position:center 20%;border-radius:50%;border:4px solid var(--gold);box-shadow:var(--shadow)}
+@media(max-width:620px){.page-head.has-ph{grid-template-columns:1fr}.page-head.has-ph .ph-img{order:-1;width:120px}}

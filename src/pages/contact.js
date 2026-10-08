@@ -6,8 +6,8 @@
     var d = S.data.site, phone = S.store.settings().phone, tel = phone.replace(/\s+/g, "");
     var wa = "https://wa.me/" + tel.replace(/^\+/, "").replace(/^0/, "254") + "?text=" + encodeURIComponent("Hello Samuel, I found you through your site and would like to connect.");
     var html =
-      '<div class="wrap page-head"><p class="eyebrow">Get in touch</p><h1>Let us build pathways together.</h1>' +
-      "<p>Invitations to sing or speak, partnerships, mentorship, or a simple hello. Reach Samuel directly.</p></div>" +
+      '<div class="wrap page-head has-ph"><img class="ph-img" src="assets/9.jpg" alt="Samuel M.K."><div><p class="eyebrow">Get in touch</p><h1>Let us build pathways together.</h1>' +
+      "<p>Invitations to sing or speak, partnerships, mentorship, or a simple hello. Reach Samuel directly.</p></div></div>" +
       '<section class="section"><div class="wrap"><div class="grid g3">' +
       '<a class="card top reveal" href="tel:' + H.esc(tel) + '"><p class="eyebrow">Call</p><h3>' + H.esc(phone) + "</h3><p>Samuel\'s direct line.</p></a>" +
       '<a class="card top reveal d2" href="' + H.esc(wa) + '" target="_blank" rel="noopener"><p class="eyebrow">WhatsApp</p><h3>Send a message</h3><p>Opens WhatsApp with a greeting ready to go.</p></a>' +
