@@ -89,6 +89,6 @@
       localStorage.setItem("smk-theme", cur);
     } catch (e) {}
     var m = document.querySelector('meta[name="theme-color"]');
-    if (m) m.setAttribute("content", cur === "light" ? "#dcdee3" : "#1c1d21");
+    if (m) m.setAttribute("content", cur === "light" ? "#ffffff" : "#121214");
   };
 })();

@@ -91,3 +91,17 @@
     if (sp) sp.classList.add("off");
   }, 900);
 })();
+
+// Gentle parallax on the hero photo only; skipped for reduced motion.
+(function () {
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var tick = false;
+  window.addEventListener("scroll", function () {
+    if (tick) return; tick = true;
+    requestAnimationFrame(function () {
+      var im = document.querySelector(".hero-photo > img:not(.logo)");
+      if (im) im.style.transform = "translateY(" + Math.min(window.scrollY, 600) * 0.06 + "px)";
+      tick = false;
+    });
+  }, { passive: true });
+})();

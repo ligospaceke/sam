@@ -14,7 +14,7 @@
       motto: "Humanity First. Every Life Matters.",
       crown: "What crowns us: Love.",
       phone: "+254 791 236179",
-      email: "",
+      email: "Smaltalkis@gmail.com",
       website: "https://ligospace.co.ke",
       tagline: "He once moved people with music. Now he builds the pathways — ideas, opportunity, purpose and love — that move whole communities."
     },
@@ -56,7 +56,7 @@
         body:
           "Samuel is a thinker, a critic, a poet and a designer of ideas. He asks questions, weighs both sides, and believes justice must move from principle into execution.\n\n" +
           "He sees what looks disconnected and asks how it can come together. He sees what looks difficult and asks how to make it comfortable. The word that suits his mind best is SYNCHRONIZED.\n\n" +
-          "His learning never followed a straight line: Commerce (Finance) at the Technical University of Kenya to third year, then a turn toward Biblical and theological studies, and the rest from life itself.\n\n" +
+          "His learning never followed a straight line: Commerce (Finance) at Kenyatta University to third year, then a turn toward Biblical and theological studies, and the rest from life itself.\n\n" +
           "And the eye for style? Intentional and distinctive, in his own words:\n\n" +
           "> “My taste of fashion is not questionable.”"
       },

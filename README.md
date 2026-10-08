@@ -1,4 +1,5 @@
-# Samuel M.K. — personal site (KRWC framework, graphite + gold)
+# Samuel M.K. — personal site (KRWC layout, soft neutral + charcoal + controlled gold, flat surfaces)
+Type: Cormorant Garamond (display) + Inter (UI). Light by default (no dark surfaces), dark toggle. No glass. Email: Smaltalkis@gmail.com. School: Kenyatta University (BCom Finance).
 Open `index.html`. Pages: Home, The Story (4 short chapters), The Thinking, The Work (LIGO://SPACE), Gallery, Contact, Admin.
 - Logo: `assets/logo.png` (cropped, rounded) + `assets/favicon.png`; used in header, hero, splash, favicon.
 - Photos: `assets/1.jpg … 10.jpg` (Samuel), `11.jpg` (SMK mark). Captions + order: `src/services/data.js` → `gallery`.
