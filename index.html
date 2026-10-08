@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1c1d21">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Samuel M.K., known as Smaltal: singer, minister, poet, thinker and founder of L.I.G.O. SPACE and the Synchronized Human System. Humanity first. Every life matters.">
+<title>Samuel M.K. (Smaltal): Founder of L.I.G.O. SPACE</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("smk-theme");
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<div id="header"></div>
+<main id="view" tabindex="-1"></main>
+<div id="footer"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;font-family:sans-serif">This site needs JavaScript turned on.</p></noscript>
+
+<!-- Plain classic scripts, in dependency order. No build step. -->
+<script src="src/services/data.js"></script>
+<script src="src/services/store.js"></script>
+<script src="src/utilities/helpers.js"></script>
+<script src="src/utilities/auth.js"></script>
+<script src="src/components/logo.js"></script>
+<script src="src/components/header.js"></script>
+<script src="src/components/footer.js"></script>
+<script src="src/pages/home.js"></script>
+<script src="src/pages/story.js"></script>
+<script src="src/pages/framework.js"></script>
+<script src="src/pages/ligo.js"></script>
+<script src="src/pages/faithFamily.js"></script>
+<script src="src/pages/contact.js"></script>
+<script src="src/pages/notFound.js"></script>
+<script src="src/pages/admin.js"></script>
+<script src="src/router.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
