@@ -1,7 +1,6 @@
-// src/components/header.js
+// src/components/header.js — glass header + slide-in drawer (one nav, two presentations)
 (function () {
   var S = window.SMK;
-
   S.nav = [
     { key: "", label: "Home", href: "#/" },
     { key: "story", label: "The Story", href: "#/story" },
@@ -10,35 +9,36 @@
     { key: "faith-family", label: "Faith & Family", href: "#/faith-family" },
     { key: "contact", label: "Contact", href: "#/contact" }
   ];
-
+  function links() {
+    return S.nav.map(function (n) {
+      return '<a href="' + n.href + '" data-nav="' + n.key + '">' + S.h.esc(n.label) + "</a>";
+    }).join("");
+  }
   S.header = function () {
-    var links = S.nav
-      .map(function (n) {
-        return '<a href="' + n.href + '" data-nav="' + n.key + '">' + n.label + "</a>";
-      })
-      .join("");
+    var phone = S.store.settings().phone;
     return (
       '<header class="site-header"><div class="wrap bar">' +
-      '<a class="brand" href="#/" aria-label="Samuel M.K., home">' +
-      S.logo(40) +
+      '<button class="icon-btn menu-btn" data-action="menu" aria-expanded="false" aria-controls="drawer" aria-label="Menu">☰</button>' +
+      '<a class="brand" href="#/" aria-label="Samuel M.K., home">' + S.logo(40) +
       "<span><b>Samuel M.K.</b><small>Smaltal · Founder, L.I.G.O. SPACE</small></span></a>" +
-      '<nav id="nav" class="nav" aria-label="Main">' + links + "</nav>" +
-      '<button class="icon-btn" data-action="theme" aria-label="Switch between light and dark">◐</button>' +
-      '<button class="icon-btn menu-btn" data-action="menu" aria-expanded="false" aria-controls="nav" aria-label="Open menu">☰</button>' +
-      "</div></header>"
+      '<nav class="nav" aria-label="Main">' + links() + "</nav>" +
+      '<button class="icon-btn" data-action="theme" aria-label="Switch light or dark">◐</button>' +
+      '<a class="btn primary sm head-cta" href="#/contact">Get in touch</a></div></header>' +
+      '<div class="scrim" data-action="menu"></div>' +
+      '<aside id="drawer" class="drawer" aria-label="Menu">' +
+      '<button class="icon-btn" data-action="menu" aria-label="Close menu">✕</button>' +
+      '<nav class="dnav">' + links() + "</nav>" +
+      '<div class="dbot"><b>What crowns us: Love.</b>' +
+      '<a class="btn primary" href="tel:' + S.h.esc(phone.replace(/\s+/g, "")) + '">Call ' + S.h.esc(phone) + "</a>" +
+      '<button class="btn ghost" data-action="theme" type="button">Switch light / dark</button></div></aside>'
     );
   };
-
-  // Mark the current page in the nav (aria-current) and close the mobile menu.
   S.setActive = function (key) {
-    var links = document.querySelectorAll("#nav a");
-    Array.prototype.forEach.call(links, function (a) {
+    Array.prototype.forEach.call(document.querySelectorAll(".nav a,.dnav a"), function (a) {
       if (a.getAttribute("data-nav") === key) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
     });
-    var nav = document.getElementById("nav");
-    var btn = document.querySelector('[data-action="menu"]');
-    if (nav) nav.classList.remove("open");
-    if (btn) btn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+    Array.prototype.forEach.call(document.querySelectorAll('[aria-controls="drawer"]'), function (b) { b.setAttribute("aria-expanded", "false"); });
   };
 })();

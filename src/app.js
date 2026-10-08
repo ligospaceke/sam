@@ -16,9 +16,10 @@
     if (act === "theme") return H.theme();
 
     if (act === "menu") {
-      var nav = document.getElementById("nav");
-      var open = nav.classList.toggle("open");
-      el.setAttribute("aria-expanded", open ? "true" : "false");
+      var openM = document.body.classList.toggle("menu-open");
+      Array.prototype.forEach.call(document.querySelectorAll('[data-action="menu"][aria-expanded]'), function (b) {
+        b.setAttribute("aria-expanded", openM ? "true" : "false");
+      });
       return;
     }
     if (act === "logout") {
@@ -74,6 +75,19 @@
     }
   });
 
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") document.body.classList.remove("menu-open");
+  });
+  window.addEventListener("hashchange", function () {
+    var bar = document.getElementById("bar");
+    if (!bar) return;
+    bar.style.width = "70%";
+    setTimeout(function () { bar.style.width = "100%"; setTimeout(function () { bar.style.width = "0"; }, 250); }, 150);
+  });
   mountChrome();
   S.route();
+  setTimeout(function () {
+    var sp = document.getElementById("splash");
+    if (sp) sp.classList.add("off");
+  }, 900);
 })();

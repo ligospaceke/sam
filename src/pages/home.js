@@ -1,67 +1,40 @@
-// src/pages/home.js
+// src/pages/home.js — hero → overlapping tiles → journey → proposition → teasers → closing
 (function () {
-  var S = window.SMK;
-  var H = S.h;
+  var S = window.SMK, H = S.h;
   S.pages = S.pages || {};
-
   S.pages.home = function () {
-    var d = S.data;
-    var tagline = S.store.settings().tagline;
-
-    var path = d.path
-      .map(function (p) {
-        return "<li><b>" + H.esc(p[0]) + "</b><small>" + H.esc(p[1]) + "</small></li>";
-      })
-      .join("");
-    var chips = d.dimensions
-      .map(function (x) {
-        return "<li>" + H.esc(x) + "</li>";
-      })
-      .join("");
-
+    var d = S.data, tagline = S.store.settings().tagline;
+    var tiles = [["1990", "Born in a church compound"], ["6", "Dimensions in the S.H.S.™"], ["7", "Verbs in the loop, from listen to serve"], ["∞", "The future, by design"]]
+      .map(function (t) { return '<div class="tile"><b>' + H.esc(t[0]) + "</b><span>" + H.esc(t[1]) + "</span></div>"; }).join("");
+    var path = d.path.map(function (p, i) {
+      return '<li class="card top reveal d' + (i + 1) + '"><span class="n">0' + (i + 1) + "</span><b>" + H.esc(p[0]) + "</b><small>" + H.esc(p[1]) + "</small></li>";
+    }).join("");
+    var chips = d.dimensions.map(function (x) { return "<li>" + H.esc(x) + "</li>"; }).join("");
     var html =
-      '<section class="hero"><div class="wrap hero-grid">' +
-      '<div class="hero-copy">' +
-      '<p class="eyebrow">Founder · L.I.G.O. SPACE</p>' +
-      "<h1>Samuel M.K.<span class=\"alias\">the boy who was called Smaltal</span></h1>" +
+      '<section class="hero"><div class="wrap hero-grid"><div>' +
+      '<p class="eyebrow">Founder · L.I.G.O. SPACE · Kajiado South</p>' +
+      '<h1>Samuel M.K.<span class="alias">the boy once called Smaltal</span></h1>' +
       '<p class="lead">' + H.esc(tagline) + "</p>" +
-      '<div class="cta"><a class="btn primary" href="#/story">Read the story</a>' +
-      '<a class="btn ghost" href="#/framework">The Synchronized Human System™</a></div>' +
-      "</div>" +
-      '<div class="hero-mark" aria-hidden="true">' + S.logo() + "</div>" +
-      "</div></section>" +
-      // quick facts
-      '<section class="wrap reveal"><div class="facts">' +
-      '<div class="card"><span class="k">Born</span>' + H.esc(d.site.born) + ", in a church compound.</div>" +
-      '<div class="card"><span class="k">A voice</span>Praise-and-worship soloist, poet and minister of the Gospel.</div>' +
-      '<div class="card"><span class="k">Builds</span>L.I.G.O. SPACE and the emerging Synchronized Human System™.</div>' +
-      "</div></section>" +
-      // the path
-      '<section class="section"><div class="wrap reveal">' +
-      '<p class="eyebrow">The journey</p><h2>Not leaving music behind. Expanding.</h2>' +
-      '<p class="lead" style="max-width:56ch">The young man who learned how to move people through music became a man asking deeper questions about people themselves.</p>' +
+      '<div class="cta"><a class="btn primary" href="#/story">Read the story</a><a class="btn ghost" href="#/ligo">Enter L.I.G.O. SPACE</a></div></div>' +
+      '<div class="hero-mark" aria-hidden="true">' + S.logo() + "</div></div></section>" +
+      '<div class="wrap tiles reveal"><div class="grid">' + tiles + "</div></div>" +
+      '<section class="section"><div class="wrap"><div class="head reveal"><p class="eyebrow">The journey</p>' +
+      "<h2>Not leaving music behind. Expanding it.</h2>" +
+      "<p>The young man who learned to move people through song began asking deeper questions about people themselves.</p></div>" +
       '<ol class="path">' + path + "</ol></div></section>" +
-      // the proposition
-      '<section class="wrap reveal"><div class="pull">' +
+      '<section class="section alt"><div class="wrap reveal"><div class="pull">' +
       '<p class="eyebrow">The central proposition</p>' +
       "<blockquote><p>Most people are not lost; they are simply unsynchronized.</p></blockquote>" +
       '<ul class="chips">' + chips + "</ul>" +
-      '<a class="btn primary" href="#/framework">Explore the six dimensions</a></div></section>' +
-      // two teasers
-      '<section class="section"><div class="wrap two">' +
-      '<a class="card reveal" href="#/story/loud"><p class="eyebrow">A voice that could not stay hidden</p>' +
-      "<h3>From warnings in rented houses to broken benches in a standing ovation.</h3>" +
-      "<p>The story of Smaltal, and a PEFA Church song launch nobody forgot.</p></a>" +
-      '<a class="card reveal" href="#/ligo"><p class="eyebrow">The vision</p>' +
-      "<h3>" + H.esc(d.site.motto) + "</h3>" +
-      "<p>L.I.G.O. SPACE is not simply about building an organization. It is about building pathways.</p></a>" +
-      "</div></section>" +
-      // closing
-      '<section class="wrap reveal" style="text-align:center;padding-bottom:24px">' +
-      '<p class="eyebrow">' + H.esc(d.site.crown) + "</p>" +
-      "<h2>The story is still being written.</h2>" +
-      '<div class="cta" style="justify-content:center"><a class="btn ghost" href="#/contact">Get in touch</a></div></section>';
-
+      '<a class="btn primary" href="#/framework">Explore the six dimensions</a></div></div></section>' +
+      '<section class="section"><div class="wrap"><div class="grid g3">' +
+      '<a class="card top reveal" href="#/story/loud"><p class="eyebrow">A voice that could not stay hidden</p><h3>From warnings in rented houses to broken benches in a standing ovation.</h3><p>The Smaltal story, and a PEFA Church song launch nobody forgot.</p></a>' +
+      '<a class="card top reveal d2" href="#/ligo"><p class="eyebrow">The vision</p><h3>' + H.esc(d.site.motto) + "</h3><p>Not an organization to admire, but pathways to walk.</p></a>" +
+      '<a class="card top reveal d3" href="#/faith-family"><p class="eyebrow">The foundation</p><h3>Above every title stands faith. Behind every vision, a home.</h3><p>The private world that carries the public work.</p></a>' +
+      "</div></div></section>" +
+      '<section class="cta-band"><div class="wrap reveal"><p class="eyebrow">' + H.esc(d.site.crown) + "</p>" +
+      "<h2>The story is still being written.</h2><p>If you believe people deserve opportunity, dignity and a path, let us talk.</p>" +
+      '<a class="btn primary" href="#/contact">Get in touch</a> <a class="btn ghost" href="#/story">Start from the beginning</a></div></section>';
     return { title: "Samuel M.K. (Smaltal): Founder of L.I.G.O. SPACE", html: html };
   };
 })();

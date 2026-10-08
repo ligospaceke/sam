@@ -15,8 +15,7 @@
       crown: "What crowns us: Love.",
       phone: "0182809790",
       website: "https://ligospace.co.ke",
-      tagline:
-        "The boy who once moved people through music is now trying to move people through ideas, opportunity, purpose and love."
+      tagline: "He once moved people with music. Now he builds the pathways — ideas, opportunity, purpose and love — that move whole communities."
     },
 
     dimensions: ["Body", "Mind", "Emotion / Heart", "Identity / Self", "Relational / Social", "Purpose"],
