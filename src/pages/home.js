@@ -13,10 +13,10 @@
     var html =
       '<section class="hero"><div class="wrap hero-grid"><div>' +
       '<p class="eyebrow">Singer · Minister · Thinker · Builder</p>' +
-      '<h1>Samuel M.K.<span class="alias">the boy once called Smaltal</span></h1>' +
+      '<h1>Samuel M.K.<span class="alias">the boy once called <b>Smaltal</b></span></h1>' +
       '<p class="lead">' + H.esc(tagline) + "</p>" +
       '<div class="cta"><a class="btn primary" href="#/story">Read the story</a><a class="btn ghost" href="#/gallery">See the gallery</a></div></div>' +
-      '<div class="hero-mark"><div class="hero-photo"><img src="assets/6.jpg" alt="Samuel M.K. in worship">' + S.logo(84) + "</div></div></div></section>" +
+      '<div class="hero-mark"><figure class="hero-photo"><div class="pf"><img src="assets/6.jpg" width="715" height="721" alt="Samuel M.K. in worship" fetchpriority="high" decoding="async"></div><figcaption>' + S.logo(44) + '<span><b>Samuel M.K.</b><small>Smaltal</small></span></figcaption></figure></div></div></section>' +
       '<div class="wrap tiles reveal"><div class="grid">' + tiles + "</div></div>" +
       '<section class="section"><div class="wrap"><div class="head reveal"><p class="eyebrow">The journey</p>' +
       "<h2>Not leaving music behind. Expanding it.</h2>" +

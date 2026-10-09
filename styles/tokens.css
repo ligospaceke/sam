@@ -1,7 +1,7 @@
 /* tokens.css — Samuel M.K. visual language: soft neutral, charcoal, controlled gold. Flat surfaces, no gradients. */
 :root,:root[data-theme="light"]{
   --bg-1:#ffffff;--bg-2:#ffffff;--bg-3:#ffffff;--alt:#f8f4ea;
-  --ink:#1c1c1e;--ink-soft:#3f3e3b;--muted:#6f6a60;--line:rgba(28,28,30,.1);
+  --ink:#1c1c1e;--ink-soft:#3f3e3b;--muted:#5f5a50;--line:rgba(28,28,30,.1);
   --gold:#8a6212;--gold-2:#c9a45c;--gold-soft:rgba(201,164,92,.16);--logo-arm:#2d2f35;
   --card-a:#fff;--card-b:#fff;--card-hover-a:#fff;--card-hover-b:#fff;
   --btn-a:#c9a45c;--btn-b:#c9a45c;--btn-ink:#1c1c1e;

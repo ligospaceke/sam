@@ -42,14 +42,8 @@ a.card{display:block;text-decoration:none}.card:hover{transform:translateY(-4px)
 .hero{padding:clamp(48px,8vw,100px) 0 clamp(90px,12vw,150px);overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
 .hero h1{font-size:clamp(3.6rem,12vw,9rem);line-height:.88;letter-spacing:-.02em;margin-bottom:.18em}
-.alias{display:block;margin-top:18px;font:italic 500 clamp(1.4rem,3.4vw,2.3rem)/1.2 "Cormorant Garamond",serif;color:var(--gold)}
-.lead{font-size:clamp(1.02rem,1.8vw,1.18rem);font-weight:300;color:var(--ink-soft);max-width:40ch}
+.lead{font-size:clamp(1.02rem,1.8vw,1.18rem);font-weight:400;color:var(--ink-soft);max-width:40ch;margin:0}
 .hero-mark{display:grid;place-items:center}
-.hero-photo{position:relative;isolation:isolate;width:min(400px,76vw)}
-.hero-photo::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold-2);z-index:-1}
-.hero-photo>img:not(.logo){width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 15%;border-radius:2px;box-shadow:var(--sh-2);will-change:transform}
-.hero-mark .hero-photo .logo{position:absolute;left:-22px;bottom:-22px;width:88px;height:88px;border-radius:18%;box-shadow:0 14px 30px -8px #0006}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-mark{order:-1;justify-items:start;padding-left:16px}.hero-mark .hero-photo{width:min(280px,72vw)}.hero-mark .hero-photo .logo{width:64px;height:64px;left:-14px;bottom:-14px}}
 .tiles{margin-top:-60px;position:relative;z-index:2}
 .tile{padding:22px 24px;border:1px solid var(--line);border-left:3px solid var(--gold-2);border-radius:2px;background:var(--card-a);box-shadow:var(--sh-2)}
 .tile b{display:block;font:500 2.8rem/1 "Cormorant Garamond",serif;font-variant-numeric:lining-nums;color:var(--ink)}.tile span{color:var(--muted);font-size:.85rem}
@@ -75,7 +69,7 @@ a.card{display:block;text-decoration:none}.card:hover{transform:translateY(-4px)
 /* page head, prose, story */
 .page-head{margin-top:0;padding:clamp(48px,9vw,120px) 0 clamp(24px,4vw,48px);border-bottom:1px solid var(--line)}
 .page-head h1{font-size:clamp(2.8rem,9vw,6.4rem);line-height:.95;max-width:14ch;letter-spacing:-.015em}
-.page-head p:not(.eyebrow){color:var(--ink-soft);max-width:54ch;font-size:1.1rem;font-weight:300;margin:0}
+.page-head p:not(.eyebrow){color:var(--ink-soft);max-width:54ch;font-size:1.1rem;font-weight:400;margin:0}
 .page-head.has-ph{display:grid;grid-template-columns:1fr 190px;gap:28px;align-items:center}
 .page-head.has-ph .ph-img{order:2;width:190px;aspect-ratio:1;object-fit:cover;object-position:center 20%;border-radius:50%;border:1px solid var(--gold-2);padding:6px;background:var(--bg-1)}
 @media(max-width:620px){.page-head.has-ph{grid-template-columns:1fr}.page-head.has-ph .ph-img{order:-1;width:112px}}
@@ -107,3 +101,24 @@ a.card{display:block;text-decoration:none}.card:hover{transform:translateY(-4px)
 #view:focus{outline:none}
 .nav a,.btn,.brand small{white-space:nowrap}.nav a{padding:8px 9px;letter-spacing:.1em;font-size:.72rem}
 @media(max-width:1379px){.brand small{display:none}}
+
+/* ---- refinements ---- */
+/* 1+5: portrait keeps its native 715:721 ratio, never covered; logo sits in a caption plate beneath */
+.hero-photo{margin:0;width:min(420px,78vw)}
+.hero-photo .pf{position:relative;isolation:isolate}
+.hero-photo .pf::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold-2);z-index:-1}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:715/721;object-fit:cover;background:var(--alt);box-shadow:var(--sh-2)}
+.hero-photo figcaption{display:flex;align-items:center;gap:14px;margin-top:34px;padding-top:16px;border-top:1px solid var(--line)}
+.hero-photo figcaption .logo{width:44px;height:44px;flex:none;border-radius:18%}
+.hero-photo figcaption b{display:block;font:600 1.3rem/1 "Cormorant Garamond",serif}
+.hero-photo figcaption small{display:block;margin-top:5px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-mark{order:-1;justify-items:start}.hero-mark .hero-photo{width:min(300px,76vw)}.hero-photo .pf::before{inset:12px -12px -12px 12px}}
+/* 3: subtitle as a signature line */
+.alias{display:flex;align-items:baseline;flex-wrap:wrap;gap:.1em .4em;margin:22px 0 30px;font:italic 500 clamp(1.3rem,3vw,2rem)/1.25 "Cormorant Garamond",serif;color:var(--ink-soft)}
+.alias::before{content:"";flex:none;align-self:center;width:32px;height:1px;background:var(--gold-2);margin-right:.1em}
+.alias b{font-weight:600;font-size:1.22em;line-height:1.05;color:var(--gold);border-bottom:1px solid var(--gold-2)}
+/* 2: header stays balanced on every width */
+.bar>*{flex:none}.brand{flex:0 1 auto;min-width:0}.brand b{white-space:nowrap}
+@media(max-width:360px){.bar{gap:8px}.brand{gap:8px}.brand b{font-size:1.15rem}}
+/* 4: contrast headroom, and a stronger setting for people who ask for it */
+@media(prefers-contrast:more){:root{--ink-soft:#1c1c1e;--muted:#3f3e3b;--line:rgba(28,28,30,.35)}:root[data-theme=dark]{--ink-soft:#f2efe8;--muted:#d3d0c8;--line:rgba(242,239,232,.4)}}

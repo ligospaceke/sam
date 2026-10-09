@@ -99,8 +99,8 @@
   window.addEventListener("scroll", function () {
     if (tick) return; tick = true;
     requestAnimationFrame(function () {
-      var im = document.querySelector(".hero-photo > img:not(.logo)");
-      if (im) im.style.transform = "translateY(" + Math.min(window.scrollY, 600) * 0.06 + "px)";
+      var im = document.querySelector(".hero-photo");
+      if (im) im.style.transform = "translateY(" + Math.min(window.scrollY, 500) * 0.04 + "px)";
       tick = false;
     });
   }, { passive: true });
